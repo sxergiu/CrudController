@@ -12,16 +12,16 @@ namespace FirstCRUDController.Controllers.Maids;
 public class MaidsController : ControllerBase
 {
     private readonly IMaidRepository _repo;
-    private readonly IRoomRepo _Rrepo;
+    private readonly IRoomRepo _roomrepo;
 
-    public MaidsController(IMaidRepository repo,IRoomRepo rrepo)
+    public MaidsController(IMaidRepository repo,IRoomRepo roomrepo)
     {
-        _Rrepo = rrepo;
+        _roomrepo = roomrepo;
         _repo = repo;
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<MaidsResponse>>> GetMaid()
+    public async Task<ActionResult<IEnumerable<MaidsResponse>>> GetMaids()
     {
         var maids = await _repo.GetMaidsIncludingRooms();
 
@@ -46,7 +46,6 @@ public class MaidsController : ControllerBase
     {
         Maid maid = null;
         List<Room> rooms = new List<Room>();
-        
         try
         {
             maid = await Maid.CreateMaidAsync(
@@ -95,7 +94,7 @@ public class MaidsController : ControllerBase
     [HttpPatch("{Id}")]
     public async Task<ActionResult> AddMaidRoom(string Id, [FromBody] string RoomId)
     {
-        var room = await _Rrepo.GetRoomById(RoomId);
+        var room = await _roomrepo.GetRoomById(RoomId);
         var maid = await _repo.GetMaidById(Id);
         
         if (room is null || maid is null)

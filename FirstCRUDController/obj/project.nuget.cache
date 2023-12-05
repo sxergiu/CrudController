@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v+ggqqlUvRD1Bq91ehdZozM3d1NUSNhMDb6RGDETCQ0Oq0RdPE43DchWblRpfPnTkat/jJktDJCK8+gTsmgVEA==",
+  "dgSpecHash": "uWL3xQ8ourfn3Ke4eemWRRiWIc93w0EQXQ9x5G2SvfJDKbLh4Uw+VwXL+znLbHDH6NA/1SsRDvDHbJMxr3JWjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sergiu.varga\\RiderProjects\\FirstCRUDController\\FirstCRUDController\\FirstCRUDController.csproj",
+  "projectFilePath": "C:\\Users\\sergiu.varga\\RiderProjects\\FirstCRUDController\\CrudController\\FirstCRUDController\\FirstCRUDController.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sergiu.varga\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\sergiu.varga\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.4\\microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",

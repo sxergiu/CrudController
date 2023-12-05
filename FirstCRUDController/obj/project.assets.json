@@ -1444,11 +1444,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sergiu.varga\\RiderProjects\\FirstCRUDController\\FirstCRUDController\\FirstCRUDController.csproj",
+      "projectUniqueName": "C:\\Users\\sergiu.varga\\RiderProjects\\FirstCRUDController\\CrudController\\FirstCRUDController\\FirstCRUDController.csproj",
       "projectName": "FirstCRUDController",
-      "projectPath": "C:\\Users\\sergiu.varga\\RiderProjects\\FirstCRUDController\\FirstCRUDController\\FirstCRUDController.csproj",
+      "projectPath": "C:\\Users\\sergiu.varga\\RiderProjects\\FirstCRUDController\\CrudController\\FirstCRUDController\\FirstCRUDController.csproj",
       "packagesPath": "C:\\Users\\sergiu.varga\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sergiu.varga\\RiderProjects\\FirstCRUDController\\FirstCRUDController\\obj\\",
+      "outputPath": "C:\\Users\\sergiu.varga\\RiderProjects\\FirstCRUDController\\CrudController\\FirstCRUDController\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sergiu.varga\\AppData\\Roaming\\NuGet\\NuGet.Config"

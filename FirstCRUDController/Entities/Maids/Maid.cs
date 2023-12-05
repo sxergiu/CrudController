@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using FirstCRUDController.Entities.Rooms;
+using FirstCRUDController.Services;
 
 namespace FirstCRUDController.Entities.Maids;
 
@@ -20,7 +21,7 @@ public class Maid : Entity
     {
         if (!await repo.IsEmailUnique(email))
             throw new Exception("Email must be unique!"); 
-        if (!IsEmailValid(email))
+        if (!EmailValidation.IsValid(email))
             throw new Exception("Invalid email!");
         if (string.IsNullOrWhiteSpace(name))
             throw new Exception("Name can't be empty!");
@@ -42,26 +43,9 @@ public class Maid : Entity
 
     public void SetEmail(string email)
     {
-        if (!IsEmailValid(email))
+        if (!EmailValidation.IsValid(email))
             throw new Exception("Invalid email!");
         Email = email;
     }
-
-    private static bool IsEmailValid(string email)
-    {
-        if (string.IsNullOrWhiteSpace(email))
-            return false;
-        try
-        {
-            var pattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"; 
-            var regex = new Regex(pattern);
-            return regex.IsMatch(email);
-        }
-        catch (RegexMatchTimeoutException)
-        {
-            return false;
-        }
-    }
-    
 
 }
